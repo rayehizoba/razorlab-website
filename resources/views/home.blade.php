@@ -26,12 +26,27 @@
         <div class="flex flex-col md:flex-row pb-20 md:py-32">
             <div class="w-full md:w-1/2">
                 <lottie-player
-                    src="https://assets7.lottiefiles.com/packages/lf20_kgotdjba.json"
+                    id="servicesLottie"
+                    src="https://assets2.lottiefiles.com/packages/lf20_kgotdjba.json"
                     background="transparent"
                     speed="1"
                     loop
                     autoplay
                 ></lottie-player>
+                @push('scripts')
+                    <script>
+                        LottieInteractivity.create({
+                            player:'#servicesLottie',
+                            mode:"scroll",
+                            actions: [
+                                {
+                                    visibility: [0.50, 1.0],
+                                    type: "play"
+                                }
+                            ]
+                        });
+                    </script>
+                @endpush
             </div>
             <div class="w-full md:w-1/2 flex items-center">
                 <div class="max-w-lg mx-auto space-y-10 text-center md:text-left">

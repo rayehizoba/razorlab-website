@@ -123,7 +123,7 @@
                 @endforeach
             </div>
             <div class="md:col-span-2 space-y-8">
-                <p class="text-sm md:text-base font-light">
+                <p class="text-lg leading-relaxed font-light">
                     {!! str_replace("\n", "<br/>", $project->overview) !!}
                 </p>
             </div>

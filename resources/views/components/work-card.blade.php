@@ -28,7 +28,7 @@
                         <video
                             x-ref="video"
                             preload="auto" playsinline loop muted
-                            class="aspect-[2/1] w-full object-cover bg-secondary-alt"
+                            class="aspect-video w-full object-cover bg-secondary-alt"
                         >
                             <source src="{{ $project->thumbnail_url }}" type="video/mp4">
                             Your browser does not support HTML5 video.
@@ -37,7 +37,7 @@
 
                         @default
                         <img
-                            class="aspect-[2/1] w-full object-cover bg-secondary-alt"
+                            class="aspect-video w-full object-cover bg-secondary-alt"
                             src="{{ $project->thumbnail_url }}"
                             alt="{{ $project->name }}"
                         />
@@ -50,7 +50,7 @@
                             <video
                                 x-ref="mask"
                                 preload="auto" playsinline loop muted
-                                class="absolute inset-0 aspect-[2/1] w-full object-cover bg-secondary-alt"
+                                class="absolute inset-0 aspect-video w-full object-cover bg-secondary-alt"
                             >
                                 <source src="{{ $project->thumbnail_mask_url }}" type="video/mp4">
                                 Your browser does not support HTML5 video.
@@ -60,7 +60,7 @@
                             @default
                             <img
                                 x-ref="mask"
-                                class="absolute inset-0 aspect-[2/1] w-full object-cover bg-secondary-alt"
+                                class="absolute inset-0 aspect-video w-full object-cover bg-secondary-alt"
                                 src="{{ $project->thumbnail_mask_url }}"
                                 alt="{{ $project->name }}"
                             />
@@ -70,7 +70,7 @@
                 </div>
             </div>
         </div>
-        <p class="text-xl font-extralight tracking-wide mt-1 z-0 relative mix-blend-difference invert text-secondary">
+        <p class="text-xl font-light tracking-wide mt-1 z-0 relative mix-blend-difference invert text-secondary">
             {{ $project->name }}
         </p>
         <p class="text-xs mt-3 md:mt-6 z-0 relative mix-blend-difference invert text-secondary-alt/50">

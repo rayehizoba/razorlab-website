@@ -4,7 +4,7 @@
             <li>
                 <div
                     onclick="Livewire.emit('openModal', 'start-project')"
-                    class="w-full aspect-[2/1] border-dotted border-2 border-secondary-alt hover:border-white/50 transition duration-500 rounded grid place-content-center text-secondary-alt hover:text-white/50"
+                    class="w-full aspect-video border-dotted border-2 border-secondary-alt hover:border-white/50 transition duration-500 rounded grid place-content-center text-secondary-alt hover:text-white/50"
                 >
                     <div class="flex flex-col items-center">
                         <i class="mdi mdi-plus text-7xl"></i>
