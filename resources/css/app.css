@@ -1,0 +1,116 @@
+@import '../../vendor/filament/forms/dist/module.esm.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    --space: 0.8rem;
+    --space-md: calc(var(--space) * 2);
+    --content-max-width: 120ch;
+}
+
+/*@layer utilities {*/
+    .content {
+        display: grid;
+        grid-template-columns:
+                    [full-start] 1fr
+                    [content-start]
+                    min(var(--content-max-width), 100% - var(--space-md) * 2)
+                    [content-end]
+                    1fr [full-end];
+    }
+
+    .content > * {
+        grid-column: content;
+    }
+
+    .content > * + * {
+        /*margin-block-start: var(--space);*/
+    }
+
+    .full {
+        grid-column: full;
+        display: grid;
+        grid-template-columns: inherit;
+        padding-block: var(--space-md);
+        overflow-x: scroll;
+        overscroll-behavior-x: contain;
+        /*scroll-snap-type: x proximity;*/
+        scrollbar-width: none;
+    }
+
+    .full::-webkit-scrollbar {
+        inline-size: 0 !important;
+        display: none;
+    }
+
+    .full .full-content {
+        grid-column: content;
+        display: flex;
+        /*align-items: center;*/
+        /*gap: var(--space);*/
+    }
+
+    .full .full-content::after {
+        content: "";
+        align-self: stretch;
+        padding-inline-end: max(
+            var(--space),
+            (100vw - var(--content-max-width)) / 2 - var(--space)
+        );
+    }
+
+    .scrollbar-none {
+        scrollbar-width: none;
+    }
+
+    .scrollbar-none::-webkit-scrollbar {
+        inline-size: 0 !important;
+        display: none;
+    }
+
+    .font-brand {
+        font-family: 'MuseoModerno', cursive;
+    }
+
+    .text-stroke {
+        -webkit-text-stroke: 1px black;
+    }
+
+    [x-cloak] {
+        display: none !important;
+    }
+
+    .line {
+        transform-origin: 0% 50%;
+        white-space: nowrap;
+        will-change: transform;
+    }
+
+    .clip-text-gradient-a .line {
+        @apply text-transparent bg-clip-text bg-gradient-to-r from-purple-200 via-blue-400 to-pink-600;
+    }
+
+    .clip-text-gradient-b .line {
+        @apply text-transparent bg-clip-text bg-gradient-to-r from-purple-100 via-orange-300 to-pink-500;
+    }
+
+    .clip-text-gradient-c .line {
+        @apply text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-blue-400 to-pink-300;
+    }
+
+    .oh {
+        overflow: hidden;
+    }
+
+    .oh__inner {
+        display: inline-block;
+        transform-origin: 0% 50%;
+        will-change: transform;
+    }
+
+    .btn {
+        @apply p-2 px-3 rounded-lg hover:opacity-75 text-sm;
+    }
+/*}*/
