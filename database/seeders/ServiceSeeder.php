@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Service;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,6 +15,28 @@ class ServiceSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Service::create([
+            'heading' => 'We develop',
+            'name' => 'Website',
+            'lottie_src' => 'https://assets10.lottiefiles.com/packages/lf20_4VvdIQ.json',
+        ]);
+
+        Service::create([
+            'heading' => 'We build',
+            'name' => 'Mobile App',
+            'lottie_src' => 'https://assets6.lottiefiles.com/packages/lf20_r6lfrga3.json',
+        ]);
+
+        Service::create([
+            'heading' => 'We make',
+            'name' => '3D Design',
+            'lottie_src' => 'https://assets6.lottiefiles.com/packages/lf20_ihg7zmol.json',
+        ]);
+
+        Service::create([
+            'heading' => 'We do',
+            'name' => '3D Printing',
+            'lottie_src' => 'https://assets6.lottiefiles.com/packages/lf20_vu2p4il8.json',
+        ]);
     }
 }
