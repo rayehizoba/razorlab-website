@@ -40,7 +40,7 @@
             class="font-brand text-xl md:text-2xl font-semibold tracking-tight text-secondary flex md:cursor-none"
         >
             <span class="js-reveal-lines" data-reveal-delay="0.6">razor</span>
-            <span class="js-reveal-lines text-stroke text-transparent" data-reveal-delay="0.6">lab</span>
+            <span class="js-reveal-lines text-stroke text-transparent" data-reveal-delay="0.6">labs</span>
         </a>
         <button
             data-magic-cursor-area
