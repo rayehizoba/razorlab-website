@@ -17,22 +17,22 @@ class ServiceSeeder extends Seeder
     {
         Service::create([
             'heading' => 'We develop',
-            'name' => 'Website',
-            'slug' => 'website',
+            'name' => 'Websites',
+            'slug' => 'websites',
             'lottie_src' => 'https://assets10.lottiefiles.com/packages/lf20_4VvdIQ.json',
         ]);
 
         Service::create([
             'heading' => 'We build',
-            'name' => 'Mobile App',
-            'slug' => 'mobile-app',
+            'name' => 'Mobile Apps',
+            'slug' => 'mobile-apps',
             'lottie_src' => 'https://assets6.lottiefiles.com/packages/lf20_r6lfrga3.json',
         ]);
 
         Service::create([
             'heading' => 'We make',
-            'name' => '3D Design',
-            'slug' => '3d-design',
+            'name' => '3D Designs',
+            'slug' => '3d-designs',
             'lottie_src' => 'https://assets6.lottiefiles.com/packages/lf20_ihg7zmol.json',
         ]);
 
