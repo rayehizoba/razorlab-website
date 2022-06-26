@@ -2941,7 +2941,7 @@ document.addEventListener('livewire:load', function () {
         var body = document.querySelector('body');
         this.$nextTick(function () {
           body.classList.replace('opacity-0', 'opacity-100');
-          (0,_utils__WEBPACK_IMPORTED_MODULE_2__.setupSplits)(); // Delayed Sections
+          setTimeout(_utils__WEBPACK_IMPORTED_MODULE_2__.setupSplits, 0); // Delayed Sections
 
           var delSections = document.querySelectorAll(".js-delayed-section");
           delSections.forEach(function (section) {
