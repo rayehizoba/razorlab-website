@@ -40,7 +40,7 @@
                             mode:"scroll",
                             actions: [
                                 {
-                                    visibility: [0.50, 1.0],
+                                    visibility: [0.0, 1.0],
                                     type: "play"
                                 }
                             ]

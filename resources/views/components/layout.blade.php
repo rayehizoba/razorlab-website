@@ -37,10 +37,10 @@
     <div class="flex items-center justify-between h-0">
         <a
             href="{{ route('home') }}"
-            class="font-brand text-xl md:text-2xl font-semibold tracking-tight text-secondary flex md:cursor-none"
+            class="font-brand text-secondary flex md:cursor-none text-xl md:text-2xl"
         >
-            <span class="js-reveal-lines" data-reveal-delay="0.6">razor</span>
-            <span class="js-reveal-lines text-stroke text-transparent" data-reveal-delay="0.6">labs</span>
+            <span class="js-reveal-lines tracking-tight" data-reveal-delay="0.6">razor</span>
+            <span class="js-reveal-lines text-stroke text-transparent tracking-wider" data-reveal-delay="0.6">labs</span>
         </a>
         <button
             data-magic-cursor-area
