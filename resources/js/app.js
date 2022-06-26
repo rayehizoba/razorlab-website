@@ -15,7 +15,7 @@ document.addEventListener('livewire:load', function () {
             this.$nextTick(() => {
                 body.classList.replace('opacity-0', 'opacity-100');
 
-                setTimeout(setupSplits, 0);
+                setupSplits();
 
                 // Delayed Sections
                 const delSections = document.querySelectorAll(".js-delayed-section");
