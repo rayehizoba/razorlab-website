@@ -1,4 +1,5 @@
 import Alpine from 'alpinejs'
+import { FastAverageColor } from 'fast-average-color';
 import FormsAlpinePlugin from '../../vendor/filament/forms/dist/module.esm'
 import {getClipPath, setupSplits} from './utils'
 import './magic-button'
@@ -71,3 +72,5 @@ window.Alpine = Alpine
 window.getClipPath = getClipPath
 
 Alpine.start()
+
+window.FastAverageColor = FastAverageColor

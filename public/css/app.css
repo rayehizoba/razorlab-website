@@ -4391,15 +4391,6 @@ select{
 .leading-loose{
   line-height: 2;
 }
-.leading-none{
-  line-height: 1;
-}
-.\!leading-none{
-  line-height: 1 !important;
-}
-.leading-3{
-  line-height: .75rem;
-}
 .tracking-widest{
   letter-spacing: 0.1em;
 }
@@ -6530,11 +6521,6 @@ body {
   .md\:text-5xl{
     font-size: 3rem;
     line-height: 1;
-  }
-
-  .md\:text-xl{
-    font-size: 1.25rem;
-    line-height: 1.75rem;
   }
 }
 @media (min-width: 1024px){
