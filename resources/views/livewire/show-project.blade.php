@@ -146,7 +146,7 @@
 </main>
 
 @push('scripts')
-    <script src="https://unpkg.com/fast-average-color/dist/index.min.js"></script>
+    <script src="http://unpkg.com/fast-average-color/dist/index.min.js"></script>
     <script>
         document.addEventListener('alpine:init', () => {
             Alpine.data('page', () => ({
