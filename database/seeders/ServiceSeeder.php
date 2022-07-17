@@ -33,7 +33,7 @@ class ServiceSeeder extends Seeder
             'heading' => 'We make',
             'name' => '3D Designs',
             'slug' => '3d-designs',
-            'lottie_src' => 'https://assets7.lottiefiles.com/private_files/lf30_hwpkbiex.json',
+            'lottie_src' => 'https://assets9.lottiefiles.com/packages/lf20_oh6P9B.json',
         ]);
 
         Service::create([
