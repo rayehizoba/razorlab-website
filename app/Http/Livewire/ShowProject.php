@@ -20,4 +20,10 @@ class ShowProject extends Component
     }
 
     protected $listeners = ['refresh' => '$refresh'];
+
+    public function delete()
+    {
+        $this->project->delete();
+        return redirect()->route('works');
+    }
 }

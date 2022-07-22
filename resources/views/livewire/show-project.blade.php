@@ -103,24 +103,26 @@
                         </p>
                     @endif
                 </div>
-                @foreach($project->links ?? [] as $link)
-                    <a
-                        data-magic-button
-                        class="relative inline-block group w-full md:w-fit md:cursor-none"
-                        href="{{ $link['url'] }}"
-                        target="_blank"
-                    >
-                        <div data-magic-button-area class="magnetic-size z-[1] absolute -inset-2 -inset-y-5"></div>
-                        <div data-magic-button-content class="">
-                            <div
-                                :class="(color && color.isDark) ? 'border-white group-hover:text-black group-hover:bg-white' : 'border-black group-hover:text-white group-hover:bg-black'"
-                                class="border rounded-full p-3 px-5 text-sm transition font-light text-center"
-                            >
-                                {{ $link['name'] }} <i class="mdi mdi-arrow-top-right"></i>
+                <div class="flex space-x-7 items-center">
+                    @foreach($project->links ?? [] as $link)
+                        <a
+                            data-magic-button
+                            class="relative inline-block group w-full md:w-fit md:cursor-none"
+                            href="{{ $link['url'] }}"
+                            target="_blank"
+                        >
+                            <div data-magic-button-area class="magnetic-size z-[1] absolute -inset-2 -inset-y-5"></div>
+                            <div data-magic-button-content class="">
+                                <div
+                                    :class="(color && color.isDark) ? 'border-white group-hover:text-black group-hover:bg-white' : 'border-black group-hover:text-white group-hover:bg-black'"
+                                    class="border rounded-full p-3 px-5 text-sm transition font-light text-center"
+                                >
+                                    {{ $link['name'] }} <i class="mdi mdi-arrow-top-right"></i>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                @endforeach
+                        </a>
+                    @endforeach
+                </div>
             </div>
             <div class="md:col-span-2 space-y-8">
                 <p class="text-lg leading-relaxed font-light">
