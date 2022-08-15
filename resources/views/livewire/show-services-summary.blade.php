@@ -116,7 +116,7 @@
                     <a
                         data-magic-button
                         class="md:cursor-none relative inline-block group"
-                        href="{{ route('works', ['filter' => $service->slug]) }}"
+                        href="{{ route('works', ['filter' => $service->id]) }}"
                     >
                         <div data-magic-button-area
                              class="magnetic-size z-[1] absolute -inset-2 -inset-y-5"></div>
@@ -131,6 +131,7 @@
 
                     <livewire:show-projects
                         :key="$service->id"
+                        :serviceId="$service->id"
                         className="grid md:grid-cols-2 gap-8 mt-8 md:mt-24"
                         limit="2"
                     />

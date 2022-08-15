@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Project;
+use App\Models\Service;
 use Illuminate\Database\Eloquent\Collection;
 use Livewire\Component;
 
@@ -13,10 +14,15 @@ class ShowProjects extends Component
     public int $limit;
     public int $displaced;
     public string $className;
+    public int|null $serviceId;
 
     public function render()
     {
-        $query = Project::query();
+        if (isset($this->serviceId)) {
+            $query = Service::find($this->serviceId)->projects();
+        } else {
+            $query = Project::query();
+        }
 
         if ($this->featured) {
             $query = $query->featured();
@@ -33,11 +39,12 @@ class ShowProjects extends Component
 
     protected $listeners = ['refresh' => '$refresh'];
 
-    public function mount(bool $featured = false, int $limit = 0, bool $displaced = false, string $className = '')
+    public function mount(int $serviceId = null, bool $featured = false, int $limit = 0, bool $displaced = false, string $className = '')
     {
         $this->featured = $featured;
         $this->limit = $limit;
         $this->displaced = $displaced;
         $this->className = $className;
+        $this->serviceId = $serviceId;
     }
 }
