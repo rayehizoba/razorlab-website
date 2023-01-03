@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use AlAminFirdows\LaravelEditorJs\Facades\LaravelEditorJs;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -56,5 +57,17 @@ class Project extends Model
     public function getCaptionUrlAttribute()
     {
         return $this->caption ? Storage::url($this->caption) : null;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getContentRenderedAttribute()
+    {
+        try {
+            return LaravelEditorJs::render($this->attributes['content']);
+        } catch (\Exception $e) {
+            return '';
+        }
     }
 }

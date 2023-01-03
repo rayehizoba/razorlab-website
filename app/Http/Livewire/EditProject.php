@@ -3,11 +3,11 @@
 namespace App\Http\Livewire;
 
 use App\Models\Project;
-use App\Models\Service;
 use Closure;
 use Filament\Forms;
 use Illuminate\Support\Str;
 use LivewireUI\Modal\ModalComponent;
+use FilamentEditorJs\Forms\Components\EditorJs;
 
 class EditProject extends ModalComponent implements Forms\Contracts\HasForms
 {
@@ -138,56 +138,7 @@ class EditProject extends ModalComponent implements Forms\Contracts\HasForms
 
                     Forms\Components\Tabs\Tab::make('Page Content')
                         ->schema([
-
-                            Forms\Components\Builder::make('content')
-                                ->blocks([
-
-                                    Forms\Components\Builder\Block::make('heading')
-                                        ->schema([
-                                            Forms\Components\TextInput::make('content')
-                                                ->label('Heading')
-                                                ->required(),
-                                            Forms\Components\Select::make('level')
-                                                ->options([
-                                                    'h1' => 'Heading 1',
-                                                    'h2' => 'Heading 2',
-                                                    'h3' => 'Heading 3',
-                                                    'h4' => 'Heading 4',
-                                                    'h5' => 'Heading 5',
-                                                    'h6' => 'Heading 6',
-                                                ])
-                                                ->required(),
-                                        ]),
-
-                                    Forms\Components\Builder\Block::make('paragraph')
-                                        ->schema([
-                                            Forms\Components\MarkdownEditor::make('content')
-                                                ->label('Paragraph')
-                                                ->required(),
-                                        ]),
-
-                                    Forms\Components\Builder\Block::make('image')
-                                        ->schema([
-                                            Forms\Components\FileUpload::make('url')
-                                                ->label('Image')
-                                                ->image()
-                                                ->required(),
-                                            Forms\Components\TextInput::make('alt')
-                                                ->label('Alt text')
-                                                ->required(),
-                                        ]),
-
-                                    Forms\Components\Builder\Block::make('section')
-                                        ->schema([
-                                            Forms\Components\FileUpload::make('url')
-                                                ->label('Image')
-                                                ->image()
-                                                ->required(),
-                                            Forms\Components\TextInput::make('alt')
-                                                ->label('Alt text')
-                                                ->required(),
-                                        ]),
-                                ]),
+                            EditorJs::make('content')
                         ]),
                 ]),
         ];

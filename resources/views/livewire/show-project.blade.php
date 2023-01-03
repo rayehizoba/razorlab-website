@@ -133,10 +133,15 @@
     </article>
 
     {{--  Project Content Section  --}}
-    {{--    <article class="content" :class="color.isDark ? 'bg-light text-black' : 'bg-dark'">--}}
-    {{--        <div class="md:py-16 pb-20 md:pb-32 space-y-5 md:space-y-20">--}}
-    {{--        </div>--}}
-    {{--    </article>--}}
+    @if(isset($project->content) && count($project->content) > 0)
+        <article class="content" :class="color.isDark ? 'bg-light text-black' : 'bg-dark'">
+            <div class="md:py-16 pb-20 md:pb-32 space-y-5 md:space-y-20">
+                <div class="prose !max-w-full">
+                    {!! $project->contentRendered !!}
+                </div>
+            </div>
+        </article>
+    @endif
 
     {{-- Related Cases Section --}}
     <article class="content bg-white py-16 pt-8 space-y-4 text-secondary">

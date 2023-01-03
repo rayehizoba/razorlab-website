@@ -4,7 +4,7 @@
 ])
 
 <div
-    class="js-delayed-section"
+    class="js-delayed-sectionn"
     x-data="WorkCard"
     :data-scrub="scrubs[Math.floor(Math.random() * scrubs.length)]"
     @if($displaced)
