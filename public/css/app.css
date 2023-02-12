@@ -3471,9 +3471,6 @@ select{
 .w-1{
   width: 0.25rem;
 }
-.\!w-full{
-  width: 100% !important;
-}
 .min-w-0{
   min-width: 0px;
 }
@@ -3513,11 +3510,11 @@ select{
 .max-w-xs{
   max-width: 20rem;
 }
-.max-w-none{
-  max-width: none;
-}
 .\!max-w-full{
   max-width: 100% !important;
+}
+.max-w-none{
+  max-width: none;
 }
 .flex-1{
   flex: 1 1 0%;
