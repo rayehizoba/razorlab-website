@@ -10,7 +10,7 @@
                     that do good <br>
                     look good.
                 </h1>
-                <p class="js-reveal-lines w-3/4 md:w-auto font-brand text-secondary-alt font-light tracking-wider md:max-w-xs md:absolute bottom-0 mt-10 md:my-16">
+                <p class="js-reveal-lines w-3/4 md:w-auto font-brand text-white font-light tracking-wider md:max-w-xs md:absolute bottom-0 mt-10 md:my-16">
                     Leading digital agency with solid design and development
                     expertise.
                 </p>
