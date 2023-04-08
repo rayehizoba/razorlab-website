@@ -135,7 +135,7 @@
     {{--  Project Content Section  --}}
     @if(isset($project->content) && count($project->content) > 0)
         <article class="content" :class="color.isDark ? 'bg-light text-black' : 'bg-dark'">
-            <div class="md:py-16 pb-20 md:pb-32 space-y-5 md:space-y-20">
+            <div class="py-14 pb-20 md:pb-32 space-y-5 md:space-y-20">
                 <div class="prose !max-w-full">
                     {!! $project->contentRendered !!}
                 </div>
