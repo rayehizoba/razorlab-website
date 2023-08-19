@@ -1,11 +1,11 @@
 import Alpine from 'alpinejs'
 import { FastAverageColor } from 'fast-average-color';
-import FormsAlpinePlugin from '../../vendor/filament/forms/dist/module.esm'
+//import FormsAlpinePlugin from '../../vendor/filament/forms/dist/module.esm'
 import {getClipPath, setupSplits} from './utils'
 import './magic-button'
 import './magic-cursor'
 
-Alpine.plugin(FormsAlpinePlugin)
+//Alpine.plugin(FormsAlpinePlugin)
 
 document.addEventListener('livewire:load', function () {
     Alpine.data('Main', () => ({

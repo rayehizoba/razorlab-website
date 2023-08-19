@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +26,10 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('/create-post', [PostController::class, 'createPost'])->name('create-post');
+    Route::get('/edit-post/{id}', [PostController::class, 'editPost'])->name('edit-post');
+    Route::get('/posts', [PostController::class, 'listPosts'])->name('list-posts');
+
 });
 
 Route::get('/', function () {
@@ -47,6 +52,7 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-Route::get('/blog', function () {
-    return view('blog');
-})->name('blog');
+Route::get('/blog', [PostController::class, 'blog'])->name('blog');
+Route::get('/post/{slug}', [PostController::class, 'showPost'])->name('single-post');
+
+

@@ -26,7 +26,8 @@
     <!-- Styles -->
     @livewireStyles
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <link href="{{ asset('vendor/filament-editorjs/css/editor.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('vendor/filament-editorjs/css/editor.css') }}" rel="stylesheet"> --}}
+    @stack('styles')
 </head>
 <body
     x-cloak
@@ -143,7 +144,7 @@
 </script>
 @livewireScripts
 <script src="{{ mix('js/app.js') }}" defer></script>
-<script src="{{ asset('vendor/filament-editorjs/js/editor.js') }}"></script>
+{{-- <script src="{{ asset('vendor/filament-editorjs/js/editor.js') }}"></script> --}}
 @stack('scripts')
 
 {{-- Modals --}}

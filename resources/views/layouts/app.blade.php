@@ -15,9 +15,10 @@
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
         <!-- Scripts -->
-        @livewireScripts
+        @livewireStyles
         <script src="{{ mix('js/app.js') }}" defer></script>
         @stack('scripts')
+
     </head>
 
     @livewire('navigation-menu')
@@ -25,4 +26,10 @@
     <body class="antialiased">
         {{ $slot }}
     </body>
+    @stack('modals')
+    @livewireScripts
+    @livewire('livewire-ui-modal')
+
+{{-- <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script> --}}
+
 </html>

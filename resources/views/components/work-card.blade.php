@@ -7,9 +7,9 @@
     class="js-delayed-sectionn"
     x-data="WorkCard"
     :data-scrub="scrubs[Math.floor(Math.random() * scrubs.length)]"
-    @if($displaced)
+    {{-- @if($displaced)
     :style="{ marginTop: `${displacements[Math.floor(Math.random() * displacements.length)]}px` }"
-    @endif
+    @endif --}}
 >
     <a
         href="{{ route('work', ['slug' => $project->slug]) }}"
@@ -17,7 +17,7 @@
         @mouseleave="mouseLeave"
         class="block group relative {{ isset($project->thumbnail_mask) ? '':'md:cursor-none' }}"
     >
-        <div class="group-hover:scale-105 transform transition duration-500 transform-gpu">
+        <div class="group-hover:scale-105 transition duration-500 transform-gpu">
             <div class="js-delayed-container -z-10 will-change-transform transform-gpu">
                 <div
                     x-ref="container"
