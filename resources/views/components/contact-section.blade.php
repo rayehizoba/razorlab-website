@@ -7,10 +7,10 @@
                             { title: 'chat with\n us now', icon_classname: 'mdi-chat-outline' },
                             { title: 'speak on\n the phone', icon_classname: 'mdi-phone-outline' },
                             { title: 'book a\n free consultation', icon_classname: 'mdi-calendar-blank' },
-                            { title: 'send us\n an email', icon_classname: 'mdi-send-outline' },
+                            { title: 'send us\n an email', icon_classname: 'mdi-send-outline', url: '/questionnaire/1' },
                         ]" :key="each.title" hidden>
                     <li class="relative group">
-                        <a href="#" class="md:cursor-none absolute inset-0 z-[1]"></a>
+                        <a :href="each.url ? each.url : '#'" class="md:cursor-none absolute inset-0 z-[1]"></a>
                         <article class="border-t border-light-alt py-5 space-y-2">
                             <div class="js-reveal-el">
                                 <i class="mdi text-3xl" :class="each.icon_classname"></i>

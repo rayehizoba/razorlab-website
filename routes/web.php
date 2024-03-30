@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\FeedbackController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,6 +43,7 @@ Route::get('/services', function () {
     return view('services');
 })->name('services');
 
+
 Route::get('/about', function () {
     return view('about');
 })->name('about');
@@ -50,3 +51,6 @@ Route::get('/about', function () {
 Route::get('/blog', function () {
     return view('blog');
 })->name('blog');
+
+Route::get('/questionnaire/{set}', [FeedbackController::class, 'showQuestionnaire'])->name('questionnaire');
+Route::post('/save-answer', [FeedbackController::class, 'saveAnswer'])->name('save-answer');
