@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\QuestionnaireController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -52,5 +52,6 @@ Route::get('/blog', function () {
     return view('blog');
 })->name('blog');
 
-Route::get('/questionnaire/{set}', [FeedbackController::class, 'showQuestionnaire'])->name('questionnaire');
-Route::post('/save-answer', [FeedbackController::class, 'saveAnswer'])->name('save-answer');
+Route::get('/questionnaire', [QuestionnaireController::class, 'index'])->name('questionnaire.index');
+Route::post('/questionnaire/submit', [QuestionnaireController::class, 'submit'])->name('questionnaire.submit');
+Route::get('/questionnaire/question/{questionNumber}', [QuestionnaireController::class, 'getQuestion']);

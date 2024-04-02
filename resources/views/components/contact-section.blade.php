@@ -4,10 +4,11 @@
         <div class="md:col-span-2 space-y-24">
             <ul class="grid md:grid-cols-2 gap-16 gap-y-5 md:gap-y-20">
                 <template x-for="each in [
-                            { title: 'chat with\n us now', icon_classname: 'mdi-chat-outline' },
+                            { title: 'chat with\n us now', icon_classname: 'mdi-chat-outline', url: '/questionnaire' },
                             { title: 'speak on\n the phone', icon_classname: 'mdi-phone-outline' },
                             { title: 'book a\n free consultation', icon_classname: 'mdi-calendar-blank' },
-                            { title: 'send us\n an email', icon_classname: 'mdi-send-outline', url: '/questionnaire/1' },
+                            { title: 'send us\n an email', icon_classname: 'mdi-send-outline' },
+                            { title: 'check\n Pricing', icon_classname: 'mdi-currency-usd' },
                         ]" :key="each.title" hidden>
                     <li class="relative group">
                         <a :href="each.url ? each.url : '#'" class="md:cursor-none absolute inset-0 z-[1]"></a>
